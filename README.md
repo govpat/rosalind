@@ -1,21 +1,86 @@
-# Rosalind
+# Rosalind Solutions (Python)
 
-Platform for learning bioinformatics through problem solving
+This repository contains Python solutions for Rosalind bioinformatics problems, organized one problem per folder.
 
-| ID | Title | Problem | Solution|
-| :---: | --- | :---: | :---: |
-| dna | Counting DNA nucleotides | [link](http://rosalind.info/problems/dna/) | [link] |
-| rna | Transcribing DNA to RNA | [link](http://rosalind.info/problems/rna/) | [link] |
-| revc | Complementing a strand of DNA | [link](http://rosalind.info/problems/revc/) | [link] |
-| fib |  Rabbits and recurrence relations | [link](http://rosalind.info/problems/fib/) | [link] |
-| gc | Computing GC content | [link](http://rosalind.info/problems/gc/) | [link](https://github.com/sgp941/rosalind/blob/master/gc/main.py) |
-| hamm | Counting point mutations | [link](http://rosalind.info/problems/hamm/) | [link](https://github.com/sgp941/rosalind/blob/master/hamm/main.py) |
-| iprb | Mendel's first law | [link](http://rosalind.info/problems/iprb/) | [link](https://github.com/sgp941/rosalind/blob/master/iprb/main.py) |
-| prot | Translating RNA into protein | [link](http://rosalind.info/problems/prot/) | [link](https://github.com/sgp941/rosalind/blob/master/prot/main.py) |
-| subs | Finding a motif in DNA | [link](http://rosalind.info/problems/subs/) | [link](https://github.com/sgp941/rosalind/blob/master/subs/main.py) |
-| cons | Consensus and profile | [link](http://rosalind.info/problems/cons/) | [link](https://github.com/sgp941/rosalind/blob/master/cons/main.py) |
-| fibd | Mortal fibonacci rabbits | [link](http://rosalind.info/problems/fibd/) | [link](https://github.com/sgp941/rosalind/blob/master/fibd/main.py) |
-| grph | Overlap graphs | [link](http://rosalind.info/problems/grph/) | [link](https://github.com/sgp941/rosalind/blob/master/grph/main.py) |
-| iev | Calculating expected offspring | [link](http://rosalind.info/problems/iev/) | [link](https://github.com/sgp941/rosalind/blob/master/iev/main.py) |
-| prob | Introduction to random strings | [link](http://rosalind.info/problems/prob/) | [link](https://github.com/sgp941/rosalind/blob/master/prob/main.py) |
-| kmp | Speeding up motif finding | [link](http://rosalind.info/problems/kmp/) | [link](https://github.com/sgp941/rosalind/blob/master/kmp/main.py) |
+## Project Goals
+
+- Keep each problem self-contained and runnable.
+- Support quick local execution against downloaded Rosalind datasets.
+- Validate behavior using sample-based functional tests.
+
+## Repository Structure
+
+- `/<problem_id>/main.py`  
+  Solution entrypoint for that problem (for example `dna/main.py`, `ksim/main.py`, `laff/main.py`).
+- `/<problem_id>/rosalind_<problem_id>.txt`  
+  Dataset file used when running locally.
+- `/<problem_id>/<problem_id>_out.txt`  
+  Generated output for that dataset.
+- `scripts/test_rosalind_samples.py`  
+  Functional sample test runner across problems.
+- `scripts/watch_downloads_and_solve.sh`  
+  Optional watcher for processing newly downloaded datasets.
+- `scripts/run_from_downloads.sh`  
+  Helper to run one downloaded dataset by problem id.
+- `_vendor_dh/`  
+  Vendored helper implementations used by some problems.
+- `problems.yaml`  
+  Metadata index for each problem (`status`, `runtime`, `dependencies`, `last_validated`).
+
+## Solved Coverage
+
+The repo includes solution folders for the Rosalind list-view problem set and currently has 100+ runnable problem modules.
+
+## How To Run A Problem
+
+From the repository root:
+
+```bash
+cp ~/Downloads/rosalind_dna.txt dna/rosalind_dna.txt
+cd dna
+python main.py > dna_out.txt
+```
+
+General pattern:
+
+1. Place dataset as `rosalind_<id>.txt` inside `<id>/`.
+2. Run `python main.py` from that folder.
+3. Save output to `<id>_out.txt`.
+
+## Testing
+
+Run sample functional tests:
+
+```bash
+python -u scripts/test_rosalind_samples.py
+```
+
+The script writes a summary report to `sample_test_report.txt`.
+
+## Dependencies
+
+Core solutions are Python-only, but some advanced problems use extra packages. Depending on the problem set you run, install:
+
+- `numpy`
+- `scipy`
+- `biopython`
+- `parasail`
+- `dendropy`
+- `tqdist` (for specific tree-distance tasks)
+
+## Notes
+
+- Most solutions are designed for file-based execution (`rosalind_<id>.txt`) rather than stdin piping.
+- Keep datasets and outputs in the corresponding problem folder for reproducible reruns.
+
+## Contribution Rules
+
+- Keep one solution per folder as `/<id>/main.py`.
+- Keep naming strict: input `rosalind_<id>.txt`, output `<id>_out.txt`.
+- Prefer deterministic output formatting (no extra logs in stdout).
+- If a problem is performance-sensitive, include the most efficient practical algorithm rather than brute force.
+- Update `problems.yaml` when adding or materially changing a solution:
+  - `status`: `implemented` or `dataset_run`
+  - `runtime`: measured value or `null`
+  - `dependencies`: external packages required by that problem
+  - `last_validated`: date of latest verified run

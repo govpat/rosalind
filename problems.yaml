@@ -1,0 +1,545 @@
+version: 1
+generated_at: '2026-02-21T18:25:32'
+problems:
+  afrq:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  alph:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  asmq:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  aspc:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  ba1c:
+    status: 'implemented'
+    runtime: null
+    dependencies:
+      - 'biopython'
+    last_validated: null
+  cat:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  chbp:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  cntq:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  cons:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  conv:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  corr:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'biopython'
+    last_validated: '2026-02-21'
+  cset:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  cstr:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  ctbl:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  ctea:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  cunr:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  dbru:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  dna:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  ebin:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  edit:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'biopython'
+    last_validated: '2026-02-21'
+  edta:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  eubt:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  eval:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  fib:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  fibd:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  foun:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'numpy'
+    last_validated: '2026-02-21'
+  full:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  gaff:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  gasm:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  gc:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  gcon:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  glob:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  grep:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  grph:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  hamm:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  iev:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  indc:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  inod:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  iprb:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  itwv:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  kmer:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'biopython'
+    last_validated: '2026-02-21'
+  kmp:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  ksim:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  laff:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'parasail'
+    last_validated: '2026-02-21'
+  lcsm:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  lcsq:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  lexf:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  lexv:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  lgis:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  lia:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  ling:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  loca:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  long:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  lrep:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mend:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mgap:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mmch:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'biopython'
+      - 'numpy'
+    last_validated: '2026-02-21'
+  motz:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mprt:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mrep:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mrna:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  mult:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  nkew:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  nwck:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  oap:
+    status: 'implemented'
+    runtime: null
+    dependencies:
+      - 'parasail'
+    last_validated: null
+  orf:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  osym:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  pcov:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  pdpl:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  pdst:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'biopython'
+    last_validated: '2026-02-21'
+  perm:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  pmch:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  pper:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  prob:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  prot:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  prsm:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  prtm:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  qrt:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  qrtd:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'tqdist'
+    last_validated: '2026-02-21'
+  rear:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  revc:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  revp:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  rna:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  rnas:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  root:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  rstr:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  rsub:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  scsp:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  seto:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sexl:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sgra:
+    status: 'dataset_run'
+    runtime: null
+    dependencies:
+      - 'numpy'
+    last_validated: '2026-02-21'
+  sign:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sims:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  smgb:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sort:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  spec:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  splc:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sptd:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sseq:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  sset:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  subs:
+    status: 'implemented'
+    runtime: null
+    dependencies: []
+    last_validated: null
+  suff:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  tran:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  tree:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  trie:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
+  wfmd:
+    status: 'dataset_run'
+    runtime: null
+    dependencies: []
+    last_validated: '2026-02-21'
