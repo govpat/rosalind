@@ -10,11 +10,11 @@ This repository contains Python solutions for Rosalind bioinformatics problems, 
 
 ## Repository Structure
 
-- `/<problem_id>/main.py`  
+- `/problems/<problem_id>/main.py`  
   Solution entrypoint for that problem (for example `dna/main.py`, `ksim/main.py`, `laff/main.py`).
-- `/<problem_id>/rosalind_<problem_id>.txt`  
+- `/problems/<problem_id>/rosalind_<problem_id>.txt`  
   Dataset file used when running locally.
-- `/<problem_id>/<problem_id>_out.txt`  
+- `/problems/<problem_id>/<problem_id>_out.txt`  
   Generated output for that dataset.
 - `scripts/test_rosalind_samples.py`  
   Functional sample test runner across problems.
@@ -36,14 +36,14 @@ The repo includes solution folders for the Rosalind list-view problem set and cu
 From the repository root:
 
 ```bash
-cp ~/Downloads/rosalind_dna.txt dna/rosalind_dna.txt
-cd dna
+cp ~/Downloads/rosalind_dna.txt problems/dna/rosalind_dna.txt
+cd problems/dna
 python main.py > dna_out.txt
 ```
 
 General pattern:
 
-1. Place dataset as `rosalind_<id>.txt` inside `<id>/`.
+1. Place dataset as `rosalind_<id>.txt` inside `problems/<id>/`.
 2. Run `python main.py` from that folder.
 3. Save output to `<id>_out.txt`.
 
@@ -75,7 +75,7 @@ Core solutions are Python-only, but some advanced problems use extra packages. D
 
 ## Contribution Rules
 
-- Keep one solution per folder as `/<id>/main.py`.
+- Keep one solution per folder as `/problems/<id>/main.py`.
 - Keep naming strict: input `rosalind_<id>.txt`, output `<id>_out.txt`.
 - Prefer deterministic output formatting (no extra logs in stdout).
 - If a problem is performance-sensitive, include the most efficient practical algorithm rather than brute force.
@@ -84,3 +84,8 @@ Core solutions are Python-only, but some advanced problems use extra packages. D
   - `runtime`: measured value or `null`
   - `dependencies`: external packages required by that problem
   - `last_validated`: date of latest verified run
+
+## Problem Catalog
+
+The full problem descriptions and links now live in `problems/README.md`.
+
