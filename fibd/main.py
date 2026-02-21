@@ -1,19 +1,19 @@
+def mortal_rabbits(n, m):
+    ages = [0] * m
+    ages[0] = 1
+
+    for _ in range(1, n):
+        newborn = sum(ages[1:])
+        ages = [newborn] + ages[:-1]
+
+    return sum(ages)
+
+
 def main():
-	months = 84
-	life = 19
-
-	t = 1
-	f = [0] * life
-	f[0] = 1
-
-	while t < months:
-		new = sum(f[1:])
-		for i in reversed(range(1,life)):
-			f[i] = f[i - 1]
-		f[0] = new
-		t += 1
-	print(sum(f))
+    with open('rosalind_fibd.txt', 'r') as f:
+        n, m = map(int, f.read().strip().split())
+    print(mortal_rabbits(n, m))
 
 
 if __name__ == '__main__':
-	main()
+    main()

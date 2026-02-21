@@ -1,38 +1,29 @@
-import numpy as np
+def parse_fasta(path):
+    out = []
+    with open(path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('>'):
+                out.append(line)
+    return ''.join(out)
+
+
+def prefix_function(s):
+    pi = [0] * len(s)
+    j = 0
+    for i in range(1, len(s)):
+        while j > 0 and s[i] != s[j]:
+            j = pi[j - 1]
+        if s[i] == s[j]:
+            j += 1
+        pi[i] = j
+    return pi
+
 
 def main():
-	f = open('rosalind_kmp.txt', 'r')
-	lines = f.readlines()
-
-	text = ''
-	fail = [0]
-	for line in lines[1:]:
-		text += line.rstrip('\n')
-
-	# print( *text, sep='  ')
-	i = 1
-	lon = 0
-	while i < len(text):
-		if text[i-lon:i+1] == text[:lon+1]:
-			lon += 1
-			fail.append(lon)
-			i += 1
-		elif lon != 0:
-			lon -= 1
-		else:
-			fail.append(0)
-			lon = 0
-			i += 1
-
-	f.close()
-	f = open('out.txt', 'w')
-	writer = f.write(' '.join(str(i) for i in fail))
-
-
-
-
-
+    s = parse_fasta('rosalind_kmp.txt')
+    print(' '.join(map(str, prefix_function(s))))
 
 
 if __name__ == '__main__':
-	main()
+    main()

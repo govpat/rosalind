@@ -1,55 +1,42 @@
-from __future__ import print_function
-import numpy as np
+ALPHABET = 'ACGT'
 
 
-switcher = {
-	'A': 0,
-	'C': 1,
-	'G': 2,
-	'T': 3,
-	0: 'A',
-	1: 'C',
-	2: 'G',
-	3: 'T'
-}
+def parse_fasta(path):
+    seqs = []
+    curr = []
+    with open(path, 'r') as f:
+        for raw in f:
+            line = raw.strip()
+            if not line:
+                continue
+            if line.startswith('>'):
+                if curr:
+                    seqs.append(''.join(curr))
+                    curr = []
+            else:
+                curr.append(line)
+    if curr:
+        seqs.append(''.join(curr))
+    return seqs
 
 
 def main():
-	f = open('rosalind_cons.txt', 'r')
-	lines = f.readlines()
+    seqs = parse_fasta('rosalind_cons.txt')
+    m = len(seqs[0])
+    profile = {base: [0] * m for base in ALPHABET}
 
-	dna_strings = []
-	string = ''
-	for line in lines:
-		# print(line)
-		if line[0] != '>':
-			string += line.rstrip('\n')
-		else:
-			dna_strings.append(string)
-			string = ''
+    for s in seqs:
+        for i, ch in enumerate(s):
+            profile[ch][i] += 1
 
-	dna_strings.append(string)
+    consensus = []
+    for i in range(m):
+        consensus.append(max(ALPHABET, key=lambda b: profile[b][i]))
 
-	profile = np.zeros((4, len(dna_strings[1])), dtype = int)
-	for string in dna_strings:	
-		for j, base in enumerate(string):
-			i = switcher[ base ]
-			profile[i][j] += 1
-	# print(profile)
-
-	consensus = ''
-	for i in range(len(profile[0])):
-		consensus += switcher[ np.argmax( profile[:, i] ) ]
-
-	print(consensus)
-	print('A: ', *profile[0], sep=' ')
-	print('C: ', *profile[1], sep=' ')
-	print('G: ', *profile[2], sep=' ')
-	print('T: ', *profile[3], sep=' ')
-
-	# print(len(consensus), len(profile[0]), len(line))
-
+    print(''.join(consensus))
+    for base in ALPHABET:
+        print(f'{base}:', *profile[base])
 
 
 if __name__ == '__main__':
-	main()
+    main()
